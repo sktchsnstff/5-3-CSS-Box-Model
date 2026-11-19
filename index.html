@@ -4,30 +4,67 @@
         <meta charset="utf-8">
         <title>Challenge: The boxer model</title>
         <style>
+            @keyframes myAnimation {
+            from {
+            opacity: 0;
+            transform: translateX(-40px);}
+            to {opacity: 1;
+            transform: translateX(0px);}}
+
+            .animated-element {
+            animation-name: myAnimation;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-fill-mode: none;
+            animation-play-state: running;}
+
+            /* @media (prefers-reduced-motion: reduce) {
+            .animated-element {
+            animation: none;}} */
+
             body {
                 font-family: cursive;
+                
+            }
+            .Title {
+                background: lightgray;
+                padding: 5px;
+                width: fit-content;
+                border: 10px double black;
+                border-radius: 10px;
             }
             .photo-gallery {
-                background: rgb(255, 254, 217);
+                background: rgb(231, 231, 231);
+                padding: 10px;
+                width: fit-content;
+                border: 10px double black;
+                border-radius: 10px;
             }
             .photo {
                 width: 200px;
             }
+            .spacing {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
         </style>
     </head>
     <body>
-
-        <h1>Boxers are beautiful?</h1>
-        
-        <div class="photo-gallery">
+        <div class="spacing">
+        <div class="Title animated-element"><h1>Boxers are beautiful!</h1></div>
+    
+        <div class="photo-gallery animated-element">
         
             <img class="photo" src="https://www.kasandbox.org/programming-images/animals/boxer-getting-tan.png">
             
             <img class="photo" src="https://www.kasandbox.org/programming-images/animals/boxer-laying-down.png">
             
-            <img class="photo" src="https://www.kasandbox.org/programming-images/animals/boxer-wagging-tongue.png">
-            
+            <img class="photo" src="https://www.kasandbox.org/programming-images/animals/boxer-wagging-tongue.png"></div>
         </div>
-        
+
     </body>
 </html>
